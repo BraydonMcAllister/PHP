@@ -1,0 +1,22 @@
+#####TO DO LIST#####
+
+- make delete item button functional [done]
+- make update storage button and storage input functional [done]
+	- add form validation to storage input [done]
+
+- add form validation to new item inputs [half done]
+
+- move sorting buttons above each column [done]
+- keep main text in all columns at the same height and size [done]
+- change package date from YYYY-MM-DD to String date on front end [done]
+- clean up css, remove repeated styles and organize by location on screen [done]
+
+- change how server requests are processed for updating tables
+	- prevent page from refreshing during a table update []
+	- possible to create a stack of requests while working on the same row and execute all at once to prevent refresh? []
+
+- add cookies and session data for personal convenience
+
+- if quantity == 0, remove item from the list [done]
+
+- recreate navigation bar form [done]

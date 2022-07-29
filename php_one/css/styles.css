@@ -1,0 +1,691 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: white;
+}
+
+
+
+#main_header {
+    display: flex;
+    justify-content: center;
+    height: 2vh;
+    width: 50vw;
+    text-align: center;
+}
+
+#main_header h1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    width: 100vw;
+}
+
+#new_item_header_container{
+    display: flex;
+    justify-content: center;
+}
+
+#navbar {
+    background-color: rgb(60,60,60);
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+    margin: auto;
+    width: 100vw;
+}
+
+#add_new_item_container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2vh auto auto auto;
+    padding: 2vh 0 2vh 0;
+
+}
+
+#newitem_submit_container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+    margin: auto;
+    width: 5vw;
+    height: 3vh;
+}
+
+#newitem{
+    margin: 0;
+    width: 100%;
+}
+
+.newitem_container{
+    display: flex;
+    justify-content: center;
+}
+
+.newitem_container label {
+    text-align: right;
+    width: 10vw;
+    margin-bottom: 1vh;
+    font-size: 100%;
+}
+
+#newitem_submit_container{
+    width: 10vw;
+    height: 3vh;
+    margin: 0 20vw 0 0;
+    justify-content: center;
+    display: flex;
+    padding: 1vh 0 0 0;
+}
+
+#newitem_submit{
+    color: rgb(60,60,60);
+    background-color: white;
+    border: none;
+    width: 10vw;
+    height: 3vh;
+}
+
+#newitem_submit:hover{
+    cursor: pointer;
+    color: black;
+    background: white;
+}
+
+.item_input{
+    height: 3vh;
+    width: 50%;
+    text-align: center;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid black;
+}
+
+.item_input:hover{
+    cursor: pointer;
+    color: black;
+    background: white;
+    font-size: 1.1vw;
+}
+/* 
+.item_input:target{
+    background: blue;
+} */
+
+input[type=radio]{
+    border: none;
+    background: red;
+    justify-content: left;
+    margin-bottom: 0;
+}
+
+input[type=radio]:hover{
+    cursor: pointer;
+}
+
+#state_solid_radio_container{
+    display: flex;
+    margin: 0 auto 0 30vw;
+    height: 3vh;
+}
+
+.state_solid_input{
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    padding: 1vh 2vw 0 2vw;
+}
+
+.input_labels{
+    display: flex;
+    justify-content: left;
+    margin: 0;
+}
+
+.newitem_check{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0 5vw 0 5vw
+}
+
+#final_container{
+    background-color: rgb(50,50,50);
+    display: flex;
+    margin: auto;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: red;
+}
+
+.sorting_buttons_container{
+    display: grid;
+    grid-template-columns: 50% 50% 0 0;
+}
+
+#table_sort_date, #div_date, #div_name, #table_sort_name, #name, #date{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#table_sort_name{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 0.9vw;
+}
+
+#div_name, #div_date{
+    border: 2px solid white;
+    background: rgb(60,60,60);
+}
+
+#name{
+    width: 100%;
+    height: 100%;
+    height: 5vh;
+    top: 50%;
+    transform: translateY(25%);
+}
+
+#date{
+    width: 100%;
+    height: 100%;
+    height: 5vh;
+    top: 50%;
+    transform: translateY(25%);
+}
+
+.input_button{
+    color: white;
+    background-color: rgb(60,60,60);
+    margin: 0;
+    height: 5vh;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 0.9vw;
+}
+.input_button:hover{
+    cursor: pointer;
+    color: rgb(60, 60, 60);
+    background: white;
+}
+
+#sort_name{
+    border: 2px solid white;
+    grid-column: 1;
+    width: 100%;
+    height: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 0.9vw;
+}
+
+#sort_date{
+    border: 2px solid white;
+    grid-column: 2;
+    width: 100%;
+    height: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 0.9vw;
+}
+
+#display_data{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: auto;
+    height: 70vh;
+    overflow-y:auto;
+    -ms-overflow-style: none;
+}
+
+#data{
+    background-color: rgb(60, 60, 60);
+    table-layout: fixed;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    height: 70vh;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+}
+
+thead th{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* FONTS */
+th{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1.2vw;
+}
+/* BORDERS */
+
+/* COlOURS */
+
+
+#th_item{
+    text-decoration: double;
+    text-align: center;
+    /* border: 2px solid white; */
+    color: white;
+    width: 30vw;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    height: 5vh;
+    background: rgb(60,60,60);
+}
+#td_item{
+    border: 2px solid white;
+    color: white;
+    height: 10vh;
+    width: 30vw;
+    text-align: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+#th_package{
+    text-decoration: double;
+    width: 15vw;
+    text-align: center;
+    /* border: 2px solid white; */
+    color: white;
+    height: 5vh;
+    background: rgb(60,60,60);
+}
+#td_package{
+    border: 2px solid white;
+    color: white;
+    width: 15vw;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#th_storage{
+    text-decoration: double;
+    text-align: center;
+    /* border: 2px solid white; */
+    color: white;
+    width: 30vw;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    height: 5vh;
+    background: rgb(60,60,60);
+}
+#td_storage{
+    text-align: center;
+    border: 2px solid white;
+    color: white;
+    height: 10vh;
+    width: 30vw;
+    text-align: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+#th_amount{
+    text-decoration: double;
+    text-align: center;
+    /* border: 2px solid white; */
+    color: white;
+    width: 5vw;
+    height: 5vh;
+    background: rgb(60,60,60);
+    
+}
+#td_amount{
+    border: 2px solid white;
+    color: white;
+    width: 5vw;
+    margin: 0;
+    padding: 0;
+}
+
+#th_total{
+    text-decoration: double;
+    text-align: center;
+    /* border: 2px solid white; */
+    color: white;
+    width: 5vw;
+    margin: 0;
+    padding: 0;
+     height: 5vh;
+     background: rgb(60,60,60);
+}
+#td_total{
+    border: 2px solid white;
+    color: white;
+    width: 5vw;
+    margin: 0;
+    padding: 0;
+}
+
+#th_quantity{
+    text-decoration: double;
+    text-align: center;
+    /* border: 2px solid white; */
+    color: white;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    width: 10vw;
+    background: rgb(60,60,60);
+}
+#td_quantity{
+    border: 2px solid white;
+    color: white;
+    width: 10vw;
+    margin: 0;
+    padding: 0;
+}
+table {
+    text-align: center;
+    /* border: 2px solid white; */
+    justify-content: center;
+    white-space: nowrap;
+    height: 70vh;
+    width: 95vw;
+    margin: 0 0 0 0;
+    border-collapse: collapse;
+}
+
+#form_container{
+    padding: 30px;
+    background: rgb(50,50,50);
+    text-align: center;
+    color: white;
+}
+
+#edit_button{
+    background-color: black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0px;
+    color: white;
+}
+
+#edit_button:hover{
+    color: red;
+    cursor: pointer;
+}
+
+#tooltip{
+    background: white;
+    color: black;
+    padding: 20px;
+    margin: 10px;
+}
+
+
+
+
+#table_row_quantity{
+  justify-content: center;
+  width: 8vw;
+}
+
+#table_row_quantity form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 8vw;
+    margin: 0;
+    padding: 0;
+}
+#table_row_quantity_object{
+    height: 5vh;
+    position: relative;
+    grid-row: 1/2;
+    grid-column: 1/5;
+    top: 50%;
+    transform: translateY(25%);
+}
+
+
+#table_row_quantity div{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    color: rgb(60,60,60);  
+}
+#table_row_quantity_form_container{
+    height: 10vh;
+    width: 10vw;
+    display: grid;
+    grid-template-columns: 3.33vw auto auto 3.33vw;
+    grid-template-rows: auto auto 0 0;
+    margin: 0;
+    padding: 0;
+}
+
+#quantity_form{
+    margin: 0;
+    padding: 0;
+    height: 5vh;
+    position: relative;
+    grid-row: 1;
+    grid-column: 1/5;
+}
+
+#item{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1.1vw;
+}
+
+#object{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1.1vw;
+}
+#quantity{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1.1vw;
+}
+
+#total{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1.1vw;
+}
+
+#amount{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1.1vw;
+}
+
+#packaged_date{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1.1vw;
+}
+
+#table_row_quantity_button_inc{
+    background: rgb(150,255,150);
+    color: rgb(60,60,60);
+    border: none;
+    height: 3.33vh;
+    width: 50%;
+    padding: 5px;
+    margin: 0;
+    position: absolute;
+    left: 100%;
+    transform: translateX(-100%);
+}
+#table_row_quantity_button_dec{
+    background: rgb(255,150,150);
+    color: rgb(60,60,60);
+    border: none;
+    height: 3.33vh;
+    width: 50%;
+    padding: 5px;
+    margin: 0;
+    position: absolute;
+    right: 100%;
+    transform: translateX(100%);
+}
+
+#table_row_quantity_button_inc:hover{
+    cursor: pointer;
+    background: rgb(70,255,70);
+}
+
+#table_row_quantity_button_dec:hover{
+    cursor: pointer;
+    background: rgb(255, 70, 70);
+}
+
+#table_row_storage{
+    justify-content: center;
+    width: 8vw;
+  }
+  
+#table_row_storage form{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 8vw;
+      margin: 0;
+  }
+
+#storage_form{
+    margin: 0;
+    padding: 0;
+    height: 5vh;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    grid-column: 1 / 4;
+  }
+#table_row_storage_object{
+      height: 5vh;
+      grid-row: 2;
+      top: 50%;
+      transform: translateY(-0%);
+  }
+#table_row_storage div{
+      color: white;
+      display: flex;
+      flex-direction: column;
+      background: white;
+      color: rgb(60,60,60);
+      
+  }
+#table_row_storage_form_container{
+      height: 10vh;
+      display: grid;
+      align-content: center;
+      margin: 0;
+      padding: 0;
+      grid-template-columns: auto 0 0 0;
+  }
+
+#update_storage_button{
+    background: rgb(200,200,255);
+    color: black;
+    border: none;
+    height: 3.33vh;
+    width: 10%;
+    padding: 5px;
+    margin: 0;
+    position: absolute;
+    left: 100%;
+    transform: translateX(-100%);
+    grid-row: 1;
+    grid-column: 4;
+  }
+
+  #update_storage_button:hover{
+    cursor: pointer;
+    background: white;
+  }
+
+  #update_storage_input{
+    background: white;
+    border: none;
+    height: 3.33vh;
+    width: 90%;
+    padding: 5px;
+    margin: 0;
+    position: absolute;
+    right: 100%;
+    transform: translateX(100%);
+  }
+
+  #update_storage_input:hover{
+    background: rgb(245, 245, 245);
+    cursor: pointer;
+  }
+
+  #table_row_item_form_container{
+    height: 10vh;
+    display: grid;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+    grid-template-columns: auto 0 0 0;
+}
+
+#table_row_item_object{
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    top: 50%;
+    grid-row: 1;
+    transform: translateY(25%);
+}
+
+  #delete_item_input{
+    height: 5vh;
+    width: 100%;
+    background: rgba(255, 0, 0, 0.75);
+    border: none;
+    margin: 0;
+    position: absolute;
+    right: 100%;
+    transform: translateX(100%);
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1.1vw;
+  }
+
+  #delete_item_input:hover{
+    background: white;
+    cursor:pointer;
+  }
+
+  #item_form{
+    margin: 0;
+    padding: 0;
+    height: 5vh;
+    width: inherit;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    grid-column: 1 / 4;
+  }
